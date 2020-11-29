@@ -1,4 +1,4 @@
-/*
+/**********************************
 Coding challenge: 
     Mutations - Check if string includes another string  
     - Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
@@ -6,7 +6,7 @@ Coding challenge:
     - The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
 */
 
-/*
+/**********************************
 Solution:
 */
 
@@ -25,7 +25,7 @@ function mutation(arr) {                                                    1.
     return true;                                                            10.
 }
 
-/*
+/**********************************
 Explanation:
 
 2.- 5. - First step in solving a challenge: Translate instructions into coding steps

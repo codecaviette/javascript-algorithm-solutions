@@ -1,9 +1,9 @@
-/*
+/**********************************
 Coding challenge: 
     Find the longest word in a provided string.
 */
 
-/* 
+/**********************************
 Solution:
 */
 

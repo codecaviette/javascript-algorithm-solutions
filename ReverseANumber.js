@@ -1,4 +1,4 @@
-/*
+/**********************************
 Coding challenge: 
     Reverse an integer.
 
@@ -7,7 +7,7 @@ Ex: x = 32243
 */
     
 
-/* 
+/**********************************
 Solution:
 */
 
@@ -18,7 +18,7 @@ function reverseNumber(num) {
 console.log(reverseNumber(32243));
 
 
-/*
+/**********************************
 Explanation:
 
 1. num = num + "";  
