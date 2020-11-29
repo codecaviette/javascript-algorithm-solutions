@@ -1,6 +1,6 @@
 /*
 Coding challenge: 
-Find the longest word in a provided string.
+    Find the longest word in a provided string.
 */
 
 /* 
