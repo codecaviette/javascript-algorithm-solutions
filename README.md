@@ -1,1 +1,1 @@
-This repo provides solutions to JavaScript algorithms.
+Practice these JavaScript algorithms - solutions included! 
