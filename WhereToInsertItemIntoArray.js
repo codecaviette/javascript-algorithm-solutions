@@ -7,17 +7,18 @@ Ex:
     - Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
 */
 
+
 /**********************************
-Solutions
+Solution 1 (for loop):   
 */
 
-// Solution 1 (for loop):   
-
 function getIndexToIns(arr, num) {
+// First step in problem solving is to translate the instructions: 
     // sort arr small to large
     // return lowest index where num should be inserted into arr
     // loop through arr to compare num to current index's value
 
+// Next step is to take translations and write them in code by defining a function: 
     arr.sort(function(a, b) {                       // Use sort array method and compareFunction for numbers [[1_1n1a6b]]
         return a - b
     });
@@ -30,11 +31,13 @@ function getIndexToIns(arr, num) {
     }
     return index;                                   // return final index value
 }
-
+// Last step is to call the function:
 getIndexToIns([40, 60], 50);                        // Call function. Output: 1
 
 
-// Solution 2 (while loop):
+/**********************************
+Solution 2 (while loop):  
+*/
 
 function getIndexToIns(arr, num) {
 
