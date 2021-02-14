@@ -1,4 +1,4 @@
-// Prompt: Given a value, insert it into a binary search tree. 
+// Coding Challenge: Given a value, insert it into a binary search tree. 
 
 // Solution:
 class Node {                            

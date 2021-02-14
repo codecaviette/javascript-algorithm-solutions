@@ -1,4 +1,4 @@
-// Prompt: Find the minimum/smallest value in a binary search tree. 
+// Coding Challenge: Find the minimum/smallest value in a binary search tree. 
 
 // Solution:
 class Node {                            
@@ -21,4 +21,5 @@ class BinarySearchTree {
             currentNode = currentNode.left;       // set current node equal to its child left node, repeatedly
         }
         return currentNode.value;           // once there's no more left children, while loop exits, & return val of currentNode
-    }}
+    }
+}
