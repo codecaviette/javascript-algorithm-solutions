@@ -1,4 +1,4 @@
-// Prompt: Find the maximum/largest value in a binary search tree. 
+// Coding Challenge: Find the maximum/largest value in a binary search tree. 
 
 // Solution:
 class Node {                            

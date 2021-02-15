@@ -3,7 +3,6 @@ Coding Challenge:
     Create a linked list using ES6. 
 */
 
-
 /**********************************
 Solution:
 */
