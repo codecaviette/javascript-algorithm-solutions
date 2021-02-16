@@ -1,4 +1,4 @@
-// Coding Challenge: Find the minimum/smallest value in a binary search tree. 
+// Coding Challenge: Find the minimum/smallest value in a binary search tree (BST)
 
 // Solution:
 class Node {                            
