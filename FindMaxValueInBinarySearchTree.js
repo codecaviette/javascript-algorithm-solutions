@@ -1,6 +1,10 @@
-// Coding Challenge: Find the maximum/largest value in a binary search tree. 
+/**********************************
+Coding Challenge: Find the maximum/largest value in a binary search tree. 
+*/
 
-// Solution:
+/**********************************
+Solution:
+*/
 class Node {                            
     constructor(value) {
         this.value = value;
