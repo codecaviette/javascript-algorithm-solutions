@@ -46,6 +46,13 @@ Solution:
 
 
 // Solution B (less expensive, object):
+    // 1. Pseudocode:
+        // Loop through array
+        // If the iterated item already exists as a key in the new object, then return that item
+        // Otherwise, add the item value as a key to the object, and assign the value to the currrent index    
+        // If the loop is exited, return undefined
+
+    // 2. Translate to code:
     function firstRecurringCharacter(input) {
       let map = {};                                // We'll fill this object with items from array and look for matches
       for (let i = 0; i < input.length; i++) {     // Loop thru array called "input"...
@@ -60,4 +67,7 @@ Solution:
 
     firstRecurringCharacter([2,5,1,2,3,5,1]);
     
-    // Big O speed: O(n)  - Speed for one loop  
+    // 3. Big O
+        // Time complexity/speed: O(n)  - Speed for one loop  
+            // We could have built a new array rather than a new object, but that would've required adding an array method like in the for loop, like .includes, which would have added O(n), resulting in a total Big O of O(n^2) which is less efficient
+        // Space complexity/memory: O(n)  - Creating new object is O(n) - memory required depends on size of input/order of input values
