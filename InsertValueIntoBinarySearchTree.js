@@ -1,6 +1,10 @@
-// Coding Challenge: Given a value, insert it into a binary search tree. 
+/**********************************
+Coding Challenge: Given a value, insert it into a binary search tree. 
+*/
 
-// Solution:
+/**********************************
+Solution:
+*/
 class Node {                            
     constructor(value) {
         this.value = value;
