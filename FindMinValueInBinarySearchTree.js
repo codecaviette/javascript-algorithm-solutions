@@ -1,6 +1,10 @@
-// Coding Challenge: Find the minimum/smallest value in a binary search tree (BST)
+/**********************************
+Coding Challenge: Find the minimum/smallest value in a binary search tree (BST)
+*/
 
-// Solution:
+/**********************************
+Solution:
+*/
 class Node {                            
     constructor(value) {
         this.value = value;
