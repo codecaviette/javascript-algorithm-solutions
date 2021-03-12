@@ -1,6 +1,7 @@
 /**********************************
 Coding Challenge:  Given an array, return the first character to reoccur
 
+  Examples: 
   Input: [2,5,1,2,3,5,1]
   Output: 2
 
