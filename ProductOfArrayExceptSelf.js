@@ -41,3 +41,39 @@ Solutions:
 
         return output;                                      // return the final output array
     };
+
+// Solution B:
+    // loop through array twice, calculating product of each side excluding i
+        // find product of items on left side (1st iterated item = 1)
+        // find product of items on right side (1st iterated item = 1)
+        // multiple prodR and prodL for final product
+
+// Solution C - optimized:
+    // 1. Pseudocode:
+        // Big O time = O(n + m) = O(n)
+        // loop through array two times (not nested)
+            // first loop thru nums array *Left to Right* (creating new *output* array **starting w value 1** - this'll push/shift product down)
+            // then loop thru nums array again *R to L* multiplying the values now in the **output array** by num array values (**starting w mult by 1**)
+    // 2. Code:
+    var productExceptSelf = function(nums) {
+
+        let left = 1;           // for each loop (left & right), the first iterated item will equal 1 (this helps push the product right/left)
+        let right = 1;
+        let output = [];        // to calc output, we first iterate L-R on nums array, then using the left output values, we iterate R-L
+
+        // first, loop L to R to create new array starting w value 1
+        for (let i=0; i<nums.length; i++) {         
+            // output = 1, 1*nums[0]...
+            output[i] = left;                       
+            left = nums[i] * left;                  
+        }
+
+        // then, loop R to L multiplying by values in new output array
+        for(let i=(nums.length-1); i>=0; i--) {
+            // output = 1, 1*nums[length-2]...
+            output[i] = right * output[i];
+            right = nums[i] * right;
+
+        }
+    return output;
+    };
