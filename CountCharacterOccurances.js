@@ -34,3 +34,7 @@ function countCharacterOccurances(str) {
 }
 
 countCharacterOccurances('apple');        // Output: {a: 1, p: 2, l: 1, e: 1}
+
+// 3. big o
+// time complexity: O(n) = O(n) + O(m) = split method + for loop 
+// space complexity: O(n) = O(n) + O(m) = strArray + strObject
