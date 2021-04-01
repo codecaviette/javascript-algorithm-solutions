@@ -19,3 +19,30 @@ Coding Challenge:
 /**********************************
 Solution
 */ 
+// Solution A (brute force, 2 nested loops, more expensive)
+  //1. Pseudocode:
+  // Check inputs: Safe to assume there will always be at least 1 item in array?
+
+  // Brute force: 2 nested loops
+      // Loop through array, starting with index i = 0
+      // For each item, also loop through the rest of the array, starting with index j = i + 1
+      // Compare the two items, and if they match return true
+      // Otherwise, return false
+
+  // 2. Code:
+  var containsDuplicate = function(nums) {  
+      if (nums.length === 0) {
+          return false;
+      }
+
+      for (let i = 0; i< nums.length ; i++) {
+          for (let j = i+1; j < nums.length; j++) {
+              if (nums[i] == nums[j]) {
+                  return true;
+              }
+          }
+      }
+      return false;
+  };
+  
+  // 3. Big O: Time = O(n^2) bc 2 nested loops
