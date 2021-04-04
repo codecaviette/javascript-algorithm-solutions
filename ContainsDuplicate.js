@@ -46,3 +46,29 @@ Solution
   };
   
   // 3. Big O: Time = O(n^2) bc 2 nested loops
+
+// Solution B (optimized, loop + object, less expensive)
+  // 1. Pseudocode:
+  // Optimized: Single loop + object
+      // Loop thru array
+          // If item is a key in the object, return true
+          // otherwise, add the item as a key with value 'true'
+      // return false if no match is found and we loop thru entire array
+  // 2. Code:
+  var containsDuplicate = function(nums) {
+      let numsObj = {};
+
+      for (let i = 0; i < nums.length; i++) {
+          if (numsObj[nums[i]]) {                   // if object contains nums[i]...
+              return true;                          // return true
+          } else {                                  // otherwise...
+              numsObj[nums[i]] = true;              // set this new object key to true (its value)
+          }
+      }
+      return false;                                 // return false once array has been looped and if true has not been returned
+  };
+  
+  // 3. Big O:
+  // Time = O(n)    - only 1 loop
+  // Memory = O(n)    - creating new object  
+
