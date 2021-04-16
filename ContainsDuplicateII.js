@@ -40,3 +40,6 @@ Solutions:
   
   // 3. Time complexity: O(n^2) bc 2 nested loops
      // Space comp: O(1) ? since no objects are being created?
+
+// Solution B (optimized, loop + map, less expensive)
+    // https://www.youtube.com/watch?v=Fmmzy5Jg-Mw
