@@ -1,5 +1,8 @@
 /**********************************
 Coding Challenge:   Return all but the first letter of a word.
+
+Input: let word = "apple";
+
 */
 
 /**********************************
