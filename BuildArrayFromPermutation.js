@@ -24,3 +24,17 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 /**********************************
 Solution: 
 */
+
+var buildArray = function(nums) {
+    // let ans = [];
+    
+    return nums.map(x => nums[x]);
+    
+    /*
+    for (let i=0; i<=nums.length-1; i++) {
+        ans.push(nums[nums[i]]);
+    }
+    
+    return ans;
+    */
+}
