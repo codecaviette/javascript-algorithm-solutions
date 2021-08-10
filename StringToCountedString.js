@@ -5,7 +5,8 @@ Coding Challenge:
 */
 
 /**********************************
-Solution (90% complete - UNABLE TO FIGURE OUT HOW TO CONVERT OBJ TO STR)
+Solution (90% complete - UNABLE TO FIGURE OUT HOW TO CONVERT OBJ TO STR 
+          -- try Object.entries(obj) to get properties in array form then join to create string)
 */
 
 //1. Pseudocode:
