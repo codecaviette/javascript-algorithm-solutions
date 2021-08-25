@@ -13,3 +13,15 @@ Ex -  Input: 10
 /**********************************
 Solution:
 */
+
+let countDownFrom = (num) => {        // A
+    // base case
+    if (num === 0) return;            // B
+  
+    // as long as base case is not met, perform this:
+    console.log(num);                 // C
+    countDownFrom(num - 1);           // D
+}
+  
+countDownFrom(10);                    // E
+  
