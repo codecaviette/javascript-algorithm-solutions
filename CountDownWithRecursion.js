@@ -25,3 +25,10 @@ let countDownFrom = (num) => {        // A
   
 countDownFrom(10);                    // E
   
+/*
+1. Line E calls the function defined in line A, which runs the function. Currently, num equals 10
+2. Go to line B. Because 10 does not equal 0, continue to line C which logs "10"
+3. Continue to line D which is the recursive function but now, the argument is 10-1 or 9
+4. This takes us back to line A, and this time, num equals 9
+5. Continue this loop until line B (base case) is met, at which point the recursive loop exits and returns nothing for that iteration.
+*/
