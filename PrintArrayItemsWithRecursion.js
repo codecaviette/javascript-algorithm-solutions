@@ -17,8 +17,8 @@ function print(array) {
   
   }
   
-  print([1, 2, 3,4,5]);         // logs 1
-                                    //  2
-                                    //  3
-                                    //  4
+print([1, 2, 3,4,5]);         // logs 1
+                                  //  2
+                                  //  3
+                                  //  4
   
