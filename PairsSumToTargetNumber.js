@@ -12,7 +12,7 @@ N
 */
 
 /**********************************
-Solution
+Solutions:
 */
 
 // O(n^2) time:
@@ -35,3 +35,31 @@ function getPairs(array, targetNum) {
 };
 
 getPairs([1,4,5,2,7,6,3], 10);		
+
+/*
+O(n) time:
+declare empty object and array we'll fill in later
+loop thu array
+  calculate difference (targetNum - iterated item)
+  does diff exist in obj?
+    if no, add item to obj as key and index as value
+    if yes, push targetNum and diff to new array, and remove diff from obj
+return new array
+*/
+
+let obj = {},
+    newArr = [];
+
+function getPairs(array, targetNum) {
+  for (let i=0; i<array.length; i++) {
+    let diff = targetNum - array[i];
+    if (obj.hasOwnProperty(diff)) {
+      newArr.push([array[i], diff])
+    } else {
+      obj[array[i]] = i;	// Big O space is largest w this soln bc obj is doubling what’s in array 
+
+    }
+  } return newArr;
+};
+
+getPairs([1,4,5,2,7,6,3], 10);			// output: [ [ 6, 4 ], [ 3, 7 ] ]
