@@ -63,3 +63,42 @@ function getPairs(array, targetNum) {
 };
 
 getPairs([1,4,5,2,7,6,3], 10);			// output: [ [ 6, 4 ], [ 3, 7 ] ]
+
+/* O(n log n) time:
+
+* Can also do for loop keeping track of first item, if difference exists, push both items to new array and remove items from array, keep looping
+
+declare empty array which will be result
+sort array in ascending order  (O n log(n)) time
+declare 2 pointers, one at each end of sorted array
+  check to see if pointers sum to targetNum
+    if yes, push numbers to new array
+  if sum is lower than targetNum, increment lower pointer
+  if sum is higher than targetNum, increment higher pointer
+*/
+
+function getPairs(array, targetNum) {
+  let result = [];
+  let sorted = array.sort((a,b) => a-b);               // sorting numbers nds a,b fxn
+  let lowIndex = 0,				  // define low and high indices 
+      highIndex = sorted.length-1;
+
+  while (lowIndex < highIndex) {
+    if (sorted[lowIndex] + sorted[highIndex] == targetNum) {
+      result.push([sorted[lowIndex], sorted[highIndex]]);
+      lowIndex++;
+      highIndex--;
+    }
+
+    else if (sorted[lowIndex] + sorted[highIndex] < targetNum) {
+      lowIndex++;
+    }
+
+    else if (sorted[lowIndex] + sorted[highIndex] > targetNum) {
+      highIndex--;
+    }
+  }
+
+  return result;
+
+};
