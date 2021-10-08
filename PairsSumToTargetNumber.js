@@ -13,12 +13,14 @@ let array = [1,4,5,2,7,6,3];
 Solutions:
 */
 
-// O(n^2) time:
-  // Declare empty array for pairs
-  // Loop through array starting at index 0 with iterator i
-    // Loop thru array again starting at index 0 with iterator j
-      // As long as i doesnt equal j, see if they add to 10
-        // if they do, push items to new array
+/* 
+O(n^2) time:
+Declare empty array for pairs
+Loop through array starting at index 0 with iterator i
+   Loop thru array again starting at index 0 with iterator j
+     As long as i doesnt equal j, see if they add to 10
+       if they do, push items to new array
+*/
 
 let pairs = [];
 
