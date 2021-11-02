@@ -13,7 +13,7 @@ Ex -  Input: 10
 /**********************************
 Solution:
 */
-let countDownFrom = (num) => {      A
+let countDownFrom = (num) => {        A
     // base case
     if (num === 0) return;            B
   
