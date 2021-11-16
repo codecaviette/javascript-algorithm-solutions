@@ -11,3 +11,6 @@ Ex:
 /**********************************
 Solution: 
 */
+// Pseudocode:
+// loop through both levels of array
+// multiply product of each subarray
