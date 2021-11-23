@@ -5,7 +5,6 @@ Modify function multiplyAll so that it returns the product of all the numbers in
 Ex: 
     Input: [[1,2],[3]]
     Output: 6
-
 */
 
 /**********************************

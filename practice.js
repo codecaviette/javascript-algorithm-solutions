@@ -1,21 +1,14 @@
 // To run code, enter "node practice.js" into terminal
 
-function squareArrayInPlace(intArray) {
-    const squaredArray = [];
+let personObj = {
+  name: 'Jenny',
+  age: 35
+};
 
-  intArray.forEach((int, index) => {
-    squaredArray[index] = Math.pow(int, 2);
-  });
+personObj['location'] = 'SF';
 
-  console.log(squaredArray);
-    /*
-    for (let i=0; i<intArray.length; i++) {
-        intArray[i] = intArray[i] * intArray[i];
-    }
-    return intArray;
-    */
-}
+let hairColor = 'black';
 
-let intArray = [1,2,3];
+personObj[hairColor] = 'blue';
 
-squareArrayInPlace(intArray);
+console.log(personObj);
