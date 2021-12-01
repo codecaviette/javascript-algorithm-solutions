@@ -1,14 +1,11 @@
 // To run code, enter "node practice.js" into terminal
 
-let personObj = {
-  name: 'Jenny',
-  age: 35
-};
 
-personObj['location'] = 'SF';
+function printBackwards(name) {
+  for (let i=name.length-1; i>=0; i--) {
+    console.log(name.charAt(i));
+}}
 
-let hairColor = 'black';
+let name = 'Jenny';
 
-personObj[hairColor] = 'blue';
-
-console.log(personObj);
+printBackwards(name);
