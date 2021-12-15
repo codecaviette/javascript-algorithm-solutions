@@ -17,13 +17,13 @@ function reverse(arrayOfChars) {
   
     while (leftIndex < rightIndex) {
   
-      // Swap characters
-      const temp = arrayOfChars[leftIndex];
-      arrayOfChars[leftIndex] = arrayOfChars[rightIndex];
-      arrayOfChars[rightIndex] = temp;
+        // Swap characters
+        const temp = arrayOfChars[leftIndex];
+        arrayOfChars[leftIndex] = arrayOfChars[rightIndex];
+        arrayOfChars[rightIndex] = temp;
   
-      // Move towards middle
-      leftIndex++;
-      rightIndex--;
+        // Move towards middle
+        leftIndex++;
+        rightIndex--;
     }
-  }
+}
