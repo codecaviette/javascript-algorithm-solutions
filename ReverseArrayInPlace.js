@@ -32,3 +32,8 @@ function reverse(arrayOfChars) {
         rightIndex--;
     }
 }
+
+/*
+BigO time: O(n) bc one loop
+
+*/
