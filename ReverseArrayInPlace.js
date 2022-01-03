@@ -36,5 +36,4 @@ function reverse(arrayOfChars) {
 /*
 BigO time: O(n) bc one loop
 BigO space: O(1) bc not using any extra space as input increases
-
 */
