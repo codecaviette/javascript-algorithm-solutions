@@ -22,7 +22,7 @@ function reverse(arrayOfChars) {
   
     while (leftIndex < rightIndex) {
   
-        // Swap characters
+        // Swap characters using temp variable
         const temp = arrayOfChars[leftIndex];
         arrayOfChars[leftIndex] = arrayOfChars[rightIndex];
         arrayOfChars[rightIndex] = temp;
