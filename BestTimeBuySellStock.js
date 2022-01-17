@@ -16,3 +16,21 @@ getMaxProfit(stockPrices);
 /**********************************
 Solution
 */
+
+// 1. Pseudocode
+// Calculate the max profit by finding lowest buy price and highest sell price
+  // Must buy THEN sell
+
+// greedy approach (pro: fast/usu one loop)
+// regardless of approach, always check for edge cases: if there are not enough prices, throw error
+// must buy then sell; cannot buy/sell at same time
+// track: minPrice (lowest price to buy), currPrice (to get currProfit), currProfit, maxProfit (to compare to currProfit)
+  // to get us started, initialize minPrice to be first item/price in array
+  // initialize maxProfit to be second item/price minus first item
+    // initialize minPrice = stockPrices[0]
+    // initialize maxProfit = stockPrices[1] - stockPrices[0]
+// loop thru, starting w i=1 (since we already declared minPrice equal to first array item)
+    // set currently-iterated item equal to currPrice
+    // find difference btwn currPrice - minPrice == currProfit
+    // if currProfit > maxProfit, set maxProfit equal to currProfit
+    // if currPrice < minPrice, set minPrice equal to currPrice
