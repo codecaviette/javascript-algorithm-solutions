@@ -34,3 +34,25 @@ Solution
     // find difference btwn currPrice - minPrice == currProfit
     // if currProfit > maxProfit, set maxProfit equal to currProfit
     // if currPrice < minPrice, set minPrice equal to currPrice
+
+// 2. Code
+function getMaxProfit(stockPrices) {
+
+  if (stockPrices.length < 2) {
+    throw new Error('Getting a profit requires at least 2 prices');
+  }    
+
+  let minPrice = stockPrices[0];
+  let maxProfit = stockPrices[1] - stockPrices[0];
+
+  for (let i = 1; i < stockPrices.length; i++) {
+    let currPrice = stockPrices[i];
+
+    let currProfit = currPrice - minPrice;
+
+    maxProfit = Math.max(maxProfit, currProfit);
+    minPrice = Math.min(currPrice, minPrice);
+  }
+
+  return maxProfit;
+}
