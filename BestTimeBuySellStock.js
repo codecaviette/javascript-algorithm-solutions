@@ -56,3 +56,8 @@ function getMaxProfit(stockPrices) {
 
   return maxProfit;
 }
+
+/*
+3. BigO time: O(n) bc only one loop
+
+*/
