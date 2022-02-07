@@ -59,5 +59,5 @@ function getMaxProfit(stockPrices) {
 
 /*
 3. BigO time: O(n) bc only one loop
-
+BigO space: O(1)
 */
