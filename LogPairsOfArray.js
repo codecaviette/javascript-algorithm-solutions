@@ -34,5 +34,5 @@ Thought process:
 */
 
 /* Big O time: O(n)?
-   Big O space:
+   Big O space: O(n) ?
 */
