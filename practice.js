@@ -16,7 +16,7 @@ while rightIndex is less than array length (we want to stop calculating when the
   increment both left and right to loop again
   while loop will exit once right is no longer less than array.length
 
-*/      
+    
 
 function findMaxSum(arr) {
   let leftIndex = 0,
@@ -30,7 +30,7 @@ function findMaxSum(arr) {
     rightIndex++;
   }
   console.log(maxSum);
-
+ 
 
 
   // let maxSum = 0;
@@ -44,8 +44,16 @@ function findMaxSum(arr) {
 }
 
 findMaxSum([2,4,6,8]);
+*/  
 
+// calculate number of bottles you can buy if you have $10 and each bottle is $1.5
 
+function buyMilk(allowance, pricePerBottle) {
+
+  console.log("buy" + Math.floor(allowance/pricePerBottle) + "bottles");
+}
+
+buyMilk(10, 1.5);
 
 
 
