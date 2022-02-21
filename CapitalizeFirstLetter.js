@@ -16,3 +16,4 @@ for (let i = 0; i < words.length; i++) {                          // Loop thru w
 words.join(" ");        // Join all recently-muted items into a string
 
 // Big O time: O(n) == split + one loop + join == O(n) + O(n) + O(n) 
+// Big O space: O(n)? == split + one loop + join == O(n) + O(n) + O(n) 
