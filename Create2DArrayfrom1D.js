@@ -28,3 +28,8 @@ return newArr;                                  // Return new array of arrays
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);    // output:  [["a", "b"], ["c", "d"]]
+
+/*
+Big O time: O(n) bc one loop 
+
+*/
