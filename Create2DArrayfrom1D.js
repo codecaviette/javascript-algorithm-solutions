@@ -31,5 +31,5 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);    // output:  [["a", "b"], ["c", "
 
 /*
 Big O time: O(n) bc one loop 
-
+Big O space: O(n) b/c newArr will grow in size as input grows
 */
