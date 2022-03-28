@@ -34,3 +34,8 @@ Explanation:
 9. - ...if the value of the secondItem's current iteration does NOT exist in firstItem, then it'll return -1 which would then return false.
 
 */
+
+/* 
+BigO time: O(n) because 1 for loop
+
+*/
