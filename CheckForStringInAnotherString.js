@@ -37,5 +37,5 @@ Explanation:
 
 /* 
 BigO time: O(n) because 1 for loop
-
+bigO space: O(1)?
 */
