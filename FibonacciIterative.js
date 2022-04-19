@@ -1,5 +1,5 @@
 /**********************************
-Coding Challenge: Given a number, num, generate the Fibonacci series up to nth term. 
+Coding Challenge: Given a number, num, generate the Fibonacci series up to num^th term. 
                   Log each new term as you go.
 
 Ex: Input: 4
