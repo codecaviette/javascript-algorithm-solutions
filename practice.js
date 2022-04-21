@@ -120,7 +120,7 @@ function func1() {
 var func2 = func1();
 func2();
 
-*/
+
 // Function to count the number of inversions
     // during the merge process
 
@@ -190,5 +190,120 @@ func2();
             count += mergeAndCount(arr, l, m, r);
         }
         return count;
-    }
-     
+    }   
+
+
+// Calculate the sum of natural number up to n
+    n = 5
+    output: 15 == 1 + 2 + 3 + 4 + 5
+
+    thinking backwards:
+    5+4+3+2+1
+    recursive: one step: 5+4 == n + (n-1)
+    base: when n == 1, return 1
+
+
+let sumUpToN = (n) => {
+  if (n == 1) return 1;
+  else return n + sumUpToN(n-1);
+}
+
+console.log(sumUpToN(5));
+
+
+// Calculate factorial of n. Reminder n! = 1 * 2 * ... * n
+// recursive solution:
+n = 5 == 5*4*3*2*1
+think backwards
+rec: 5*4 == n * (n-1)
+base: when n = 1 return 1
+
+let factorial = (n) => {
+  if (n == 1) return 1;
+  else return n * factorial(n-1);
+}
+
+console.log(factorial(3))
+
+//iterative for loop:
+loop thru 1 to n
+set sum var == 1
+each time, multiply sum by n
+increase i by 1
+
+let sum = 1;
+let factorial = (n) => {
+  for (let i=1; i<=n; i++) {
+    sum *= i;
+
+  }
+return sum;
+}
+
+// iterative while loop 
+let sum = 1,
+    i = 1;
+
+let factorial = (n) => {
+  while (i<=n) {
+    sum *= i;
+    i++;
+}
+  return sum;
+}
+
+console.log(factorial(3))
+
+//Calculate the value of n to the m power
+n = 2, m = 3
+result = 2^3 == 2*2*2
+
+thinking recursively == backwards - in this case dn matter cause all values are tehe same
+recursive soln: 2*2 == n*n == n^(m-1)
+base: once m==0, return 1
+
+**ND TO CIRCLE BACK**
+
+let powN = (n, m) => {
+  if (m==1) return n;
+  else return n * powN(n, m-1);
+}
+
+console.log(powN(2, 3));
+
+//Calculate the sum of elements of an array of numbers
+input: arr = [1, 3, 5, 7]
+output: 16
+
+// iterative
+  sum = 0
+  looop thru array
+    sum += arr[i]
+    return sum
+
+// recursive
+  thinking backwards and breaking into subproblem: we're starting at last array item and adding it to the rest of the array
+  believe with all your might that the recursive call will work on the "rest of the array"
+
+  base case: w each recursive call, arr is getting smaller so once array length is 1, return arr[0]
+  recursive section: last array item + the rest of the array 
+                    arr[arr.length-1] + recursiveFxn(arr.slice(0,-1))
+
+*/
+
+let recursive = (arr) => {
+  if (arr.length == 1) return arr[0];
+  else return arr[arr.length-1] + recursive(arr.slice(0,-1));
+}
+
+console.log(recursive([1, 3, 5, 7]));
+
+
+
+
+
+
+
+
+
+
