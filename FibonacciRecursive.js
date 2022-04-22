@@ -9,9 +9,10 @@ Ex: Input: n = 4
 /**********************************
 Solution: 
 
-with recursion, think backwards: 3, 2, 1, 1, 0
+with recursion, think backwards:  fib values:     3, 2, 1, 1, 0
+                                  fib position/n: 4  3  2  1  0
 recursive call: how do i get to 3 from 2 and 1? === (n-1) + (n-2)
-base case: when should i exit? once i reach the first two values of Fib's sequence, 0,1. 
+base case: when should i exit? once i reach the first two positions(and values) of Fib's sequence, 0,1. In this soln, we also incl n==2 bc its val is also 1 
 
 */
 
