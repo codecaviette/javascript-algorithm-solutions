@@ -289,7 +289,7 @@ output: 16
   recursive section: last array item + the rest of the array 
                     arr[arr.length-1] + recursiveFxn(arr.slice(0,-1))
 
-*/
+
 
 let recursive = (arr) => {
   if (arr.length == 1) return arr[0];
@@ -298,8 +298,30 @@ let recursive = (arr) => {
 
 console.log(recursive([1, 3, 5, 7]));
 
+// Given a string, return true if it is a palindrome and false if it is not. Use recursion.
+ex. kayak
 
+// subroblem: check first and last characters to see if they match, then check the rest of characters (recursive call)
+// rest of characters is getting smaller, so exit once we have 1 char or 0 chars (this takes care of even and odd number of characters)
+  // 0 and 1 chars are palindromes, so return true
+// otherwise, return false
 
+*/
+
+let isPalindrome = (string) => {
+  
+  if (string.length == 1 ||  string.length == 0) return true;
+
+  if (string.charAt(0) == string.charAt(string.length-1)) {
+    return isPalindrome(string.substring(1, string.length-1));
+  }
+
+  return false;
+
+}
+
+console.log(isPalindrome('kayaaak'));
+ 
 
 
 
