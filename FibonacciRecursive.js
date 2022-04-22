@@ -7,7 +7,12 @@ Ex: Input: n = 4
 */
 
 /**********************************
-Solution
+Solution: 
+
+with recursion, think backwards: 3, 2, 1, 1, 0
+recursive call: how do i get to 3 from 2 and 1? === (n-1) + (n-2)
+base case: when should i exit? once i reach the first two values of Fib's sequence, 0,1. 
+
 */
 
 let fib = (n) => {
