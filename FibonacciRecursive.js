@@ -17,8 +17,8 @@ base case: when should i exit? once i reach the first two positions(and values) 
 */
 
 let fib = (n) => {
-    if (n < 1) return 0;
-    else if (n <= 2) return 1;       
+    if (n < 2) return n;                // we can do this bc when fib n is 1 or 0, the fib value matches each
+    //else if (n <= 2) return 1;       
     else return fib(n-1) + fib(n-2);
 }
 
