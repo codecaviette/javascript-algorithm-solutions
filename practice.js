@@ -306,7 +306,7 @@ ex. kayak
   // 0 and 1 chars are palindromes, so return true
 // otherwise, return false
 
-*/
+
 
 let isPalindrome = (string) => {
   
@@ -322,6 +322,164 @@ let isPalindrome = (string) => {
 
 console.log(isPalindrome('kayaaak'));
  
+
+
+Implement queue that adds node, removes node, peeks at first node, returns length
+  Queue is FIFO == add node to end, remove from beginning
+    Use linked list bc better time complexity than array when removing from beginning
+  Will need: class Node + class Queue
+    Node creates new node objects - needs value and pointer
+    Queue creates the new queue object that we made edits to - needs first node, last node, length
+
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  } 
+}
+
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
+  peek() {
+    return this.first;
+  }
+  enqueue(value) {
+    // create new node to add 
+    // if queue is empty, set first and last item, no pointers needed since only 1 node 
+    // otherwise, add to node to end of queue, but first update last pointer
+    // incr length
+    // return queue
+
+    const newNode = new Node(value);
+    if (this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    this.length++;
+    return this;
+  }
+  dequeue() {
+    // remove first item, move first position to second item, decr length
+      // if queue is empty, return null
+      // if queue has 1 node, the new queue will be empty; return null
+      // otherwise, this.first = this.first.next
+      // decr length
+    if (this.length == 0) return null;
+    if (this.length == 1)  {
+      this.last = null;
+    }
+    this.first = this.first.next;
+    this.length--;
+    return this;
+  }
+
+}
+
+
+// queue == node + queue classes 
+  // node: value, pointer
+  // queue: head, tail, length
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  peek() {
+    return this.head;
+  }
+  enqueue(value) {
+    // create new node to add
+    // tail.next will point to new node
+    // tail wll become new node
+    // length++
+    /// return new queue
+
+    const newNode = new Node(value);
+    if (this.length == 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    
+    this.length++;
+    return this;
+  }
+  dequeue(){
+    // if length == 0, return null
+    // if length == 1, tail == null
+    // everything else, head moves back
+    // length --
+
+    if (this.length == 0) return null;
+
+    if (this.length == 1) {
+      this.tail = null;
+    }
+    this.head = this.head.next;
+    this.length--;
+    return this;
+
+  }
+}
+// implement stack using array - LIFO
+// define class Stack as blueprint 
+
+*/
+
+class Stack {
+  constructor() {
+    this.stack = [];
+  }
+  peek() {
+    return this.stack[this.stack.length - 1];
+  }
+  pop() {
+    this.stack.pop();
+    return this;
+  }
+  push(value) {
+    this.stack.push(value);
+    return this;
+  }
+  isEmpty() {
+    if (this.stack.length === 0) return true;
+    else return false;
+  }
+}
+
+let myStack = new Stack();
+console.log(myStack.isEmpty());
+console.log(myStack.push(5));
+console.log(myStack.isEmpty());
+
+
+
+
+
+
+
+
+
+
 
 
 
