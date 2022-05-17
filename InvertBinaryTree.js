@@ -9,3 +9,18 @@ Example 2:
     Input: root = [2,1,3]
     Output: [2,3,1]
 */
+
+/* Solution */
+
+var invertTree = function(root) {
+    if (!root) return null;
+    if (!root.left && !root.right) return root;
+    else {
+        let leftTree = invertTree(root.left);
+        let rightTree = invertTree(root.right);
+        
+        root.left = rightTree;
+        root.right = leftTree;
+    }
+    return root;
+};
