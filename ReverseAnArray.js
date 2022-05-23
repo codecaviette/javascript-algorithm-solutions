@@ -12,8 +12,9 @@ Solution:
 */
 
 var array = ["h","e","l","l","o"];
-var reverseArray = function(array) {          
-    array.reverse();
+var reverseArray = (array) => {          
+    return array.reverse();
 };
 
+console.log(reverseArray(array));
 //output: ["o","l","l","e","h"]

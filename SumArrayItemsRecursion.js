@@ -19,9 +19,9 @@ output: 16
 
 */
 
-let recursive = (arr) => {
+let sumItems = (arr) => {
   if (arr.length == 1) return arr[0];
-  else return arr[arr.length-1] + recursive(arr.slice(0,-1));
+  else return arr[arr.length-1] + sumItems(arr.slice(0,-1));
 }
 
-console.log(recursive([1, 3, 5, 7]));
+console.log(sumItems([1, 3, 5, 7]));
