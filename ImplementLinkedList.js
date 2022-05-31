@@ -40,7 +40,7 @@ class LinkedList {
     }
     insert(position, value) {
         // create new node to insert
-        // loop thru (always starting at head); when find position-1, insert newNode 
+        // loop thru (always starting at head); when find position-1 (cuz can't go back once you reach position), insert newNode 
             // if currentPos equals position-1, insert newNode by updating newNode.next to point to currentNode.next and currentNode.next point to newNode
             // otherwise, keep going 
                 // at end of each iteration, move currentPos and currentNode forward by incrementing currentPos and updating currentNode to currentNode.next
@@ -63,6 +63,27 @@ class LinkedList {
         }
         this.length++;
         return this;
+    }
+    remove(position) {
+        // loop thru
+            // track currNode, currPosition
+            // once you reach position-1, use this val as a reference point (bc can't go backwards) and redirect its pointer to 2 nodes down (ie. currNode.next.next)
+            // at end of each iteration, increment currentPosition and move currentNode forward
+        // decrement length
+        // return this
+        let currentNode = this.head;
+        let currentPosition = 0;
+        while (currentNode !== null) {
+            if (currentPosition == (position - 1)) {
+                let previousNode = currentNode;
+                //currentNode = currentNode.next;
+                previousNode.next = currentNode.next.next;
+            }
+            currentPosition++;
+            currentNode = currentNode.next;
+        }
+        this.length--;
+        return this;   
     }   	
 }
 
@@ -70,6 +91,7 @@ let myLinkedList = new LinkedList(1);
 myLinkedList.append(2);
 myLinkedList.append(3);
 myLinkedList.insert(1,5);
+myLinkedList.remove(1);
 myLinkedList.printList()
 console.log(myLinkedList.printList());
 
