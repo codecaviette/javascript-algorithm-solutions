@@ -75,9 +75,9 @@ class LinkedList {
         let currentPosition = 0;
         while (currentNode !== null) {
             if (currentPosition == (position - 1)) {
-                let previousNode = currentNode;
+                //let previousNode = currentNode;
                 //currentNode = currentNode.next;
-                previousNode.next = currentNode.next.next;
+                let previousNode.next = currentNode.next.next;
             }
             currentPosition++;
             currentNode = currentNode.next;
