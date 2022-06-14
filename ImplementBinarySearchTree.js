@@ -71,11 +71,30 @@ class BinarySearchTree {
             }
         }
         return false;
-
     }
     // remove(value) {
         // super complex!
     // }
+    breadthFirstSearch() {
+        // use queue to keep track of children of nodes we've visited 
+        // so we know where to visit next (next level and in correct order l-r)
+        let currentNode = this.root;        // always start at root node
+        let list = [];                      // array we'll return w nodes in BFS order
+        let queue = [];                     // allows us to keep track of children so we know what node to process next
+        queue.push(currentNode);            // start w processing root node
+    
+        while (queue.length > 0) {          // as long as the queue is not empty, ie as long as there are nodes left to process
+            currentNode = queue.shift();    // process first item in queue by popping from queue...
+            list.push(currentNode.value);   // ... and adding it to list
+            if (currentNode.left) {             // if popped node has any children, add them to queue
+                queue.push(currentNode.left);
+            }
+            if (currentNode.right) {
+                queue.push(currentNode.right);
+            }
+        }
+        return list;                        // finally, return list
+    }
 }
 
 let myTree = new BinarySearchTree();
