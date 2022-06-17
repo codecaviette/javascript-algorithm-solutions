@@ -471,12 +471,25 @@ console.log(myStack.isEmpty());
 console.log(myStack.push(5));
 console.log(myStack.isEmpty());
 */
-
+/*
 let myObj = {'name':'jenny',
               'age':2 
             }
 
 console.log(Object.entries(myObj));
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
