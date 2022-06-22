@@ -20,8 +20,7 @@ Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
 */
 
-/* Solution */
-
+/* Solution 1 */
 var isPalindrome = function(s) {
     // if s.length < 2, return true
     // remove all non-alphanumeric characters w regex
@@ -40,6 +39,32 @@ var isPalindrome = function(s) {
     let array = lowerCase.split("");
     let reversedString = array.reverse().join("");
     
-    return reversedString === lowerCase;
-    
+    return reversedString === lowerCase;            // Can compare directly bc they're primitive values
 };
+    // BigO time: O(n) ish == .split, .reverse, and .join are each about O(n) time
+    // BigO space: O(n) == essentially making and storing 4 copies of input which would each grow as s grows; O(n) + O(n) + O(n) + O(n) == 4 O(n) == O(n)
+
+
+/* Solution 2 */
+var isPalindrome = function(s) {
+    // remove all non-alphanum chars and make all lowercase
+    let lettersOnly = s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    
+    // swap first and last characters, move inwards, and if they ever dont match, retrun false
+        // while first < last
+    let leftIndex = 0,
+        rightIndex = lettersOnly.length - 1;
+    
+    while (leftIndex < rightIndex) {
+        if (lettersOnly[leftIndex] === lettersOnly[rightIndex]) {
+            leftIndex++;
+            rightIndex--;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+};
+    // BigO time: O(n) == O(n) replace + O(n) toLowerCase + O(logN) while loop swapping 2 at a time
+    // BigO space: O(n) == new variable lettersOnly will grow as input grows
