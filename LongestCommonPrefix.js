@@ -24,17 +24,11 @@ var longestCommonPrefix = function(strs) {
         for (let i = 0; i < strs.length; i++) {
             let firstStringsLetter = strs[0][j];
             // if don't match, exit loop and return current prefix
-            if (firstStringsLetter !== strs[i][j]) {
-                return prefix;
-            }
+            if (firstStringsLetter !== strs[i][j]) return prefix;
             // if we reach the last item and its jth char matches that of 1st item, add char to prefix
-            if (i == strs.length - 1) {
-                prefix += firstStringsLetter;    
-            }
+            if (i == strs.length - 1) prefix += firstStringsLetter;    
         }
     }
-        
     // return prefix
     return prefix;
-
 };
