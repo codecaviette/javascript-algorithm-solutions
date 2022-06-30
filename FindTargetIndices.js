@@ -24,7 +24,8 @@ Explanation: After sorting, nums is [1,2,2,3,5].
 The index where nums[i] == 5 is 4.
 */
 
-/* Solution */
+
+/* Solution 1: Loop thru entire array */
 var targetIndices = function(nums, target) {
     let result = [];
     // sort nums in ascending order
@@ -41,6 +42,38 @@ var targetIndices = function(nums, target) {
     Time: O(nlogn) since it incurs O(nlogn) to sort + O(n) to loop thru nums
     Space: O(1) since running this fxn doesn't take up additional memory as nums grows
 */
+
+
+/* Solution 2: Binary search */
+var targetIndices = function(nums, target) {
+    // sort nums ascending order
+    let result = [];
+    let sorted = nums.sort((a,b) => a-b);
+    
+    // find elements that equal target and push their indices to new array
+    // use helper fxn to do binary search
+    binarySearch(result, sorted, 0, sorted.length - 1, target);
+    
+    // sort new array in ascending order and return
+    return result.sort((a,b) => a-b);
+};
+
+let binarySearch = function(targetIndices, sorted, left, right, target) {
+    if(left > right) return;
+    
+    let mid = Math.floor((left+right) / 2);
+    
+    if(sorted[mid] === target) targetIndices.push(mid);
+    
+    // @DaveWu: I suspect there's a way to use the ternary operator below instead of multiple if stmts, but I'm unsure what expression should be executed if the condition is falsy 
+    if(target <= sorted[mid-1]) binarySearch(targetIndices, sorted, left, mid-1, target);   
+    if(target >= sorted[mid+1]) binarySearch(targetIndices, sorted, mid+1, right, target);
+}
+/* BigO
+    Time: O(nlogn) === O(logn) for binary search + O(nlogn) for first sort + O(nlogn) for 2nd sort
+    Space: I know this recursive solution builds a call stack which would take up extra space but I'm unsure how to quantify its space complexity
+*/
+
 
 const testCases = [
     {
