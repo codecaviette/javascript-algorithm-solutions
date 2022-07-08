@@ -19,7 +19,7 @@ var mergeTrees = function(root1, root2) {
     
     //base case:
     if (!root1 && !root2) return null;
-    // calculate value of new  node:
+    // calculate value of new node:
     let valOfNewNode = 0;
     if (!root2) {
         valOfNewNode = root1.val; 
@@ -32,8 +32,8 @@ var mergeTrees = function(root1, root2) {
     // create new merged tree by adding new node 
     let root3 = new TreeNode(valOfNewNode);
     
-    root3.left = mergeTrees(root1.left, root2.left);        // code dn work bc "cannot read props of null" reading 'left' of 'root2.left'
-    root3.right = mergeTrees(root1.right, root2.right);
+    root3.left = mergeTrees(root1 ? root1.left : 0, root2 ? root2.left : 0);
+    root3.right = mergeTrees(root1 ? root1.right : 0, root2 ? root2.right : 0);
     
     return root3;
 };
