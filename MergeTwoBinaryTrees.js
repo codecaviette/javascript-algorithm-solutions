@@ -19,6 +19,7 @@ var mergeTrees = function(root1, root2) {
     
     //base case:
     if (!root1 && !root2) return null;
+
     // calculate value of new node:
     let valOfNewNode = 0;
     if (!root2) {
