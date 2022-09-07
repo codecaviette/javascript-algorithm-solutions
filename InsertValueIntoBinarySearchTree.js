@@ -15,7 +15,7 @@ class Node {
 
 class BinarySearchTree {
     constructor() {
-        this.root = new Node(value);
+        this.root = null;
         this.count = 0;                   
     }
 
@@ -43,3 +43,7 @@ class BinarySearchTree {
         }
         searchTree(this.root);
     }}
+
+let myBST = new BinarySearchTree();
+
+console.log(myBST);
